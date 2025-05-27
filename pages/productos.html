@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Productos</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+    <header>
+  <img src="../media/img/logo.png" alt="Logo de Brook" class="logo-banner" />
+  <nav>
+    <ul>
+      <li><a href="../index.html"><button class="boton_inicio">Inicio</button></a></li>
+      <li><a href="productos.html"><button class="boton_productos">Productos</button></a></li>
+      <li><a href="contacto.html"><button class="boton_contacto">Contacto</button></a></li>
+    </ul>
+  </nav>
+</header>
+
+    <main class="productos-container">
+
+        <div class="producto">
+            <h3 class="titulo-producto">Apple iPhone 13 - Blanco estelar</h3>
+            <div class="slider">
+                <img src="../media/img/productos/iphone13/i13_1.png" alt="iphone13-img1" class="producto-img active" />
+                <img src="../media/img/productos/iphone13/i13_2.png" alt="iphone13-img2" class="producto-img" />
+                <button class="prev">&lt;</button>
+                <button class="next">&gt;</button>
+            </div>
+            <p>Pantalla OLED 6.1", chip A15 Bionic, cámara dual 12 MP, Face ID, grabación 4K.</p>
+            <p class="precio-producto"><strong>$1.118.599</strong></p>
+            <button class="btn-comprar">Comprar</button>
+        </div>
+
+        <div class="producto">
+            <h3 class="titulo-producto">Apple iPhone 14 - Blanco estelar</h3>
+            <div class="slider">
+                <img src="../media/img/productos/iphone14/i14_1.png" alt="iphone14-img1" class="producto-img active" />
+                <img src="../media/img/productos/iphone14/i14_2.png" alt="iphone14-img2" class="producto-img" />
+                <img src="../media/img/productos/iphone14/i14_3.png" alt="iphone14-img3" class="producto-img" />
+                <button class="prev">&lt;</button>
+                <button class="next">&gt;</button>
+            </div>
+            <p>Pantalla OLED 6.1", chip A15, cámara dual mejorada, Modo Cine 4K, detección de choques.</p>
+            <p class="precio-producto"><strong>$1.599.000</strong></p>
+            <button class="btn-comprar">Comprar</button>
+        </div>
+
+        <div class="producto">
+            <h3 class="titulo-producto">Apple iPhone 15 Negro</h3>
+            <div class="slider">
+                <img src="../media/img/productos/iphone15/i15_1.png" alt="iphone15-img1" class="producto-img active" />
+                <img src="../media/img/productos/iphone15/i15_2.png" alt="iphone15-img2" class="producto-img" />
+                <img src="../media/img/productos/iphone15/i15_3.png" alt="iphone15-img3" class="producto-img" />
+                <button class="prev">&lt;</button>
+                <button class="next">&gt;</button>
+            </div>
+            <p>Pantalla OLED 6.1", Dynamic Island, chip A16, cámara 48 MP, USB-C.</p>
+            <p class="precio-producto"><strong>$2.079.999</strong></p>
+            <button class="btn-comprar">Comprar</button>
+        </div>
+
+        <div class="producto">
+            <h3 class="titulo-producto">Apple iPhone 16 Pro - Titanio negro</h3>
+            <div class="slider">
+                <img src="../media/img/productos/iphone16/i16_1.png" alt="iphone16-img1" class="producto-img active" />
+                <img src="../media/img/productos/iphone16/i16_2.png" alt="iphone16-img2" class="producto-img" />
+                <img src="../media/img/productos/iphone16/i16_3.png" alt="iphone16-img3" class="producto-img" />
+                <button class="prev">&lt;</button>
+                <button class="next">&gt;</button>
+            </div>
+            <p>Pantalla OLED 6.3", chip A18 Pro, cámara 48 MP avanzada, grabación 4K a 120 fps.</p>
+            <p class="precio-producto"><strong>$3.044.999</strong></p>
+            <button class="btn-comprar">Comprar</button>
+        </div>
+
+    </main>
+
+    <script>
+    document.querySelectorAll('.slider').forEach(slider => {
+        const imgs = slider.querySelectorAll('img.producto-img');
+        let current = 0;
+
+        const prevBtn = slider.querySelector('button.prev');
+        const nextBtn = slider.querySelector('button.next');
+
+        function showImage(index) {
+            imgs.forEach((img, i) => {
+                img.classList.toggle('active', i === index);
+            });
+        }
+
+        prevBtn.addEventListener('click', () => {
+            current = (current - 1 + imgs.length) % imgs.length;
+            showImage(current);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            current = (current + 1) % imgs.length;
+            showImage(current);
+        });
+    });
+    </script>
+
+    <footer>
+        Brook Buenos Aires © Todos los derechos reservados
+    </footer>
+</body>
+</html>
