@@ -130,6 +130,91 @@ nav ul li a {
   width: 100%;
 }
 
+/* Aquí comienza la parte nueva para contacto2 */
+
+.boton_contacto2 {
+  cursor: pointer;
+  padding: 15px 25px;
+  border: unset;
+  border-radius: 15px;
+  color: #212121;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  min-width: 160px;
+  text-align: center;
+}
+
+.boton_contacto2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: #979797;
+  z-index: -1;
+  transition: all 250ms;
+}
+
+.boton_contacto2:hover {
+  color: #e8e8e8;
+}
+
+.boton_contacto2:hover::before {
+  width: 100%;
+}
+
+.card {
+  max-width: 400px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  background-color: #facc15;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button[type="submit"]:hover {
+  background-color: #fbbf24;
+}
+
 footer {
   font-family: 'Roboto', sans-serif;
   background-color: rgba(255, 255, 255, 0.8);
@@ -154,7 +239,7 @@ footer {
 .producto {
   flex: 1 1 250px;
   max-width: 360px;
-  min-height: 560px; /* altura mínima para que todos tengan mismo alto */
+  min-height: 560px;
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -163,13 +248,13 @@ footer {
   flex-direction: column;
   align-items: center;
   padding: 15px;
-  justify-content: space-between; /* para que botón quede abajo */
+  justify-content: space-between;
 }
 
 .slider {
   position: relative;
   width: 100%;
-  height: 300px; /* altura fija para evitar saltos */
+  height: 300px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -232,7 +317,7 @@ footer {
   max-width: 220px;
   align-self: center;
   box-shadow: 0 4px 8px rgba(0,123,255,0.4);
-  margin-top: auto; /* empuja hacia abajo */
+  margin-top: auto;
 }
 
 .btn-comprar:hover {

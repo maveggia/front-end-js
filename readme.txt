@@ -1,20 +1,29 @@
-BROOK BUENOS AIRES - Sitio Web
+# BROOK BUENOS AIRES - Sitio Web
 
-Descripción:
-Este es un sitio web creado para la tienda "Brook Buenos Aires", especializada en la venta de iPhones originales en Argentina.
+## Descripción  
+Este es un sitio web creado para la tienda **Brook Buenos Aires**, especializada en la venta de iPhones originales en Argentina.
 
-Estructura del sitio:
-- index.html: página de inicio con un video promocional y los principales beneficios de comprar en Brook.
-- pages/productos.html: sección donde se mostrarán los productos disponibles.
-- pages/contacto.html: sección de contacto para consultas o atención al cliente con Formspree.
-- css/styles.css: Hoja de estilos para toda la web, diseñada con Flexbox y estilo responsivo.
-- media/img/logo.png: Logo de la tienda usado en el encabezado.
+## Estructura del sitio
 
-Características:
-- Diseño limpio, intuitivo y profesional.
-- Video de YouTube embebido con promoción de iPhones.
-- Navegación intuitiva entre páginas.
-- Preparado para continuar ampliando (productos, contacto, carrito, etc).
+- index.html`: Página de inicio con un video promocional y beneficios destacados.
+- pages/productos.html`: Sección de catálogo de productos.
+- pages/contacto.html`: Formulario de contacto usando Formspree.
+- pages/contacto2.html`: Segundo formulario con diseño diferente.
+- css/styles.css`: Hoja de estilos general, responsiva, con Flexbox.
+- media/img/logo.png`: Logo principal mostrado en el encabezado.
+- js/slider.js`: Script para el carrusel de imágenes de productos.
+- js/contacto.js` y `js/contacto2.js`: Scripts para enviar formularios mediante fetch a Formspree, mostrando los datos en consola (`F12`) y reseteando los campos después del envío.
 
-Autor: Matias Alvarez Veggia
-Última actualización: Mayo 2025
+## Características
+
+- Diseño responsive.
+- Video promocional embebido desde YouTube.
+- Mapa con ubicación integrado vía iframe.
+- Navegación sencilla e intuitiva entre páginas.
+- Formularios funcionales con integración a **Formspree**.
+
+## Autor  
+**Matias Alvarez Veggia**
+
+## Última actualización  
+**Julio 2025**

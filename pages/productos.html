@@ -13,6 +13,7 @@
       <li><a href="../index.html"><button class="boton_inicio">Inicio</button></a></li>
       <li><a href="productos.html"><button class="boton_productos">Productos</button></a></li>
       <li><a href="contacto.html"><button class="boton_contacto">Contacto</button></a></li>
+      <li><a href="contacto2.html"><button class="boton_contacto">Contacto2</button></a></li>
     </ul>
   </nav>
 </header>
@@ -73,34 +74,9 @@
             <p class="precio-producto"><strong>$3.044.999</strong></p>
             <button class="btn-comprar">Comprar</button>
         </div>
-
     </main>
 
-    <script>
-    document.querySelectorAll('.slider').forEach(slider => {
-        const imgs = slider.querySelectorAll('img.producto-img');
-        let current = 0;
-
-        const prevBtn = slider.querySelector('button.prev');
-        const nextBtn = slider.querySelector('button.next');
-
-        function showImage(index) {
-            imgs.forEach((img, i) => {
-                img.classList.toggle('active', i === index);
-            });
-        }
-
-        prevBtn.addEventListener('click', () => {
-            current = (current - 1 + imgs.length) % imgs.length;
-            showImage(current);
-        });
-
-        nextBtn.addEventListener('click', () => {
-            current = (current + 1) % imgs.length;
-            showImage(current);
-        });
-    });
-    </script>
+    <script src="../js/slider.js"></script>
 
     <footer>
         Brook Buenos Aires © Todos los derechos reservados
